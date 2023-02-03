@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 
 class CartItem extends Component {
+    constructor(){
+        super();
+        this.state = {
+            "name":"Mobile",
+            "price":100000,
+            "qty":1
+        }
+    }
     render() {
+        
         return (
             <div className='cart-item'>
                 <div className='left-block'>
                     <img  />
                 </div>
                 <div className='right-block'>
-                    <div >Watch</div>
+                    <div >{this.state.name}</div>
                     <div >RS 1199</div>
                     <div >Qty : 1</div>
                     <div className='cart-item-actions'>
