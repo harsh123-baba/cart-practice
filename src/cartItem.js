@@ -12,9 +12,9 @@ const CartItem = (props) =>{
                 <div >RS {price}</div>
                 <div >Qty : {qty}</div>
                 <div className='cart-item-actions'>
-                    <img className='action-icons' onClick={()=>{this.props.onIncreaseQty(this.props.product)}} src="https://cdn-icons-png.flaticon.com/512/992/992651.png" />
-                    <img className='action-icons' onClick={()=>{this.props.onDecreaseQty(this.props.product)}} src="https://cdn-icons-png.flaticon.com/512/992/992683.png" />
-                    <img className='action-icons' onClick={()=>{this.props.onDelete(this.props.product)}} src="https://cdn-icons-png.flaticon.com/512/3405/3405244.png" />
+                    <img className='action-icons' onClick={()=>{props.onIncreaseQty(props.product)}} src="https://cdn-icons-png.flaticon.com/512/992/992651.png" />
+                    <img className='action-icons' onClick={()=>{props.onDecreaseQty(props.product)}} src="https://cdn-icons-png.flaticon.com/512/992/992683.png" />
+                    <img className='action-icons' onClick={()=>{props.onDelete(props.product)}} src="https://cdn-icons-png.flaticon.com/512/3405/3405244.png" />
                 </div>
             </div>
         </div>
