@@ -18,6 +18,7 @@ const Cart = (props)=>{
                             
                         })
                 }
+                
             </div>
         )
     

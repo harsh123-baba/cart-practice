@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 const CartItem = (props) =>{
-    const {price, title, qty} = props.product;
+    const {price, title, qty, img} = props.product;
     return (
         <div className='cart-item'>
             <div className='l eft-block'>
-                <img  />
+                <img style={styles.image}  src ={img}/>
             </div>
             <div className='right-block'>
                 <div >{title}</div>
@@ -19,5 +19,11 @@ const CartItem = (props) =>{
             </div>
         </div>
     )
+}
+const styles = {
+    "image":{
+        height:"80px",
+        width:"80px"
+    }
 }
 export default CartItem;

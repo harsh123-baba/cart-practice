@@ -9,18 +9,21 @@ class App extends React.Component {
         {
           "title": "Mobile",
           "price": 100000,
+          "img":"https://cdn-icons-png.flaticon.com/512/254/254638.png",
           "qty": 1,
           "id": 1
         },
         {
           "title": "Watch",
           "price": 100,
+          "img":"https://cdn-icons-png.flaticon.com/512/3109/3109881.png",
           "qty": 1,
           "id": 2
         },
         {
           "title": "Pendrive",
           "price": 300,
+          "img":"https://cdn-icons-png.flaticon.com/512/917/917249.png",
           "qty": 1,
           "id": 3
         }
@@ -67,6 +70,16 @@ class App extends React.Component {
     })
     return count;
   }
+  getTotalPrice = (products) =>{
+    let price = 0;
+    products.map((product)=>{
+      console.log(product)
+      price  += product.qty * product.price;
+
+    })
+    console.log(price);
+    return price;
+  }
   render() {
     const {products} = this.state
     return (
@@ -83,6 +96,7 @@ class App extends React.Component {
         onDecreaseQty = {this.handleDecreseQuantity}
         onDelete = {this.handleDelete}
         />
+        <div style={{padding:20, fontSize:30}}>Total Price : {this.getTotalPrice(products)}</div>
       </div>
     );
   }
